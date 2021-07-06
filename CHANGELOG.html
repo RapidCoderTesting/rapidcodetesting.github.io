@@ -1,0 +1,531 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js bdfd">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Changelog - Bot Designer for Discord - Wiki</title>
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+            </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "bdfd" : "bdfd";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('bdfd')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="foreword.html">Foreword</a></li><li class="chapter-item expanded affix "><a href="CHANGELOG.html" class="active">Changelog</a></li><li class="chapter-item expanded "><a href="guides/slashCommands.html"><strong aria-hidden="true">1.</strong> Guides</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="guides/awaitedCommands.html"><strong aria-hidden="true">1.1.</strong> Awaited Commands</a></li><li class="chapter-item expanded "><a href="guides/bdscript2.html"><strong aria-hidden="true">1.2.</strong> BDScript 2</a></li><li class="chapter-item expanded "><a href="guides/buttons.html"><strong aria-hidden="true">1.3.</strong> Buttons</a></li><li class="chapter-item expanded "><a href="guides/selectmenu.html"><strong aria-hidden="true">1.4.</strong> Select Menu</a></li><li class="chapter-item expanded "><a href="guides/commandsAnatomy.html"><strong aria-hidden="true">1.5.</strong> Commands Anatomy</a></li><li class="chapter-item expanded "><a href="guides/trycatch.html"><strong aria-hidden="true">1.6.</strong> Error Handling</a></li><li class="chapter-item expanded "><a href="guides/httpRequests.html"><strong aria-hidden="true">1.7.</strong> HTTP Requests</a></li><li class="chapter-item expanded "><a href="guides/ifStatements.html"><strong aria-hidden="true">1.8.</strong> If Statements</a></li><li class="chapter-item expanded "><a href="guides/permissions.html"><strong aria-hidden="true">1.9.</strong> Permissions</a></li><li class="chapter-item expanded "><a href="guides/slashCommands.html"><strong aria-hidden="true">1.10.</strong> Slash Commands</a></li></ol></li><li class="chapter-item expanded "><a href="bdscript/introduction.html"><strong aria-hidden="true">2.</strong> BDScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="bdscript/introduction.html"><strong aria-hidden="true">2.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="bdscript/addCmdReactions.html"><strong aria-hidden="true">2.2.</strong> $addCmdReactions</a></li><li class="chapter-item expanded "><a href="bdscript/addEmoji.html"><strong aria-hidden="true">2.3.</strong> $addEmoji</a></li><li class="chapter-item expanded "><a href="bdscript/addField.html"><strong aria-hidden="true">2.4.</strong> $addField</a></li><li class="chapter-item expanded "><a href="bdscript/addReactions.html"><strong aria-hidden="true">2.5.</strong> $addReactions</a></li><li class="chapter-item expanded "><a href="bdscript/addTimestamp.html"><strong aria-hidden="true">2.6.</strong> $addTimestamp</a></li><li class="chapter-item expanded "><a href="bdscript/allMembersCount.html"><strong aria-hidden="true">2.7.</strong> $allMembersCount</a></li><li class="chapter-item expanded "><a href="bdscript/allowMention.html"><strong aria-hidden="true">2.8.</strong> $allowMention</a></li><li class="chapter-item expanded "><a href="bdscript/argCount.html"><strong aria-hidden="true">2.9.</strong> $argCount</a></li><li class="chapter-item expanded "><a href="bdscript/argsCheck.html"><strong aria-hidden="true">2.10.</strong> $argsCheck</a></li><li class="chapter-item expanded "><a href="bdscript/authorAvatar.html"><strong aria-hidden="true">2.11.</strong> $authorAvatar</a></li><li class="chapter-item expanded "><a href="bdscript/authorID.html"><strong aria-hidden="true">2.12.</strong> $authorID</a></li><li class="chapter-item expanded "><a href="bdscript/authorIcon.html"><strong aria-hidden="true">2.13.</strong> $authorIcon</a></li><li class="chapter-item expanded "><a href="bdscript/authorOfMesssage.html"><strong aria-hidden="true">2.14.</strong> $authorOfMesssage</a></li><li class="chapter-item expanded "><a href="bdscript/authorURL.html"><strong aria-hidden="true">2.15.</strong> $authorURL</a></li><li class="chapter-item expanded "><a href="bdscript/author.html"><strong aria-hidden="true">2.16.</strong> $author</a></li><li class="chapter-item expanded "><a href="bdscript/ban.html"><strong aria-hidden="true">2.17.</strong> $ban</a></li><li class="chapter-item expanded "><a href="bdscript/banID.html"><strong aria-hidden="true">2.18.</strong> $banID</a></li><li class="chapter-item expanded "><a href="bdscript/blackListIDs.html"><strong aria-hidden="true">2.19.</strong> $blackListIDs</a></li><li class="chapter-item expanded "><a href="bdscript/blackListRoles.html"><strong aria-hidden="true">2.20.</strong> $blackListRoles</a></li><li class="chapter-item expanded "><a href="bdscript/blackListRolesIDs.html"><strong aria-hidden="true">2.21.</strong> $blackListRolesIDs</a></li><li class="chapter-item expanded "><a href="bdscript/blackListServers.html"><strong aria-hidden="true">2.22.</strong> $blackListServers</a></li><li class="chapter-item expanded "><a href="bdscript/blackListUsers.html"><strong aria-hidden="true">2.23.</strong> $blackListUsers</a></li><li class="chapter-item expanded "><a href="bdscript/botID.html"><strong aria-hidden="true">2.24.</strong> $botID</a></li><li class="chapter-item expanded "><a href="bdscript/botLeave.html"><strong aria-hidden="true">2.25.</strong> $botLeave</a></li><li class="chapter-item expanded "><a href="bdscript/botListDescription.html"><strong aria-hidden="true">2.26.</strong> $botListDescription</a></li><li class="chapter-item expanded "><a href="bdscript/botListHide.html"><strong aria-hidden="true">2.27.</strong> $botListHide</a></li><li class="chapter-item expanded "><a href="bdscript/botTyping.html"><strong aria-hidden="true">2.28.</strong> $botTyping</a></li><li class="chapter-item expanded "><a href="bdscript/c.html"><strong aria-hidden="true">2.29.</strong> $c</a></li><li class="chapter-item expanded "><a href="bdscript/changeCooldownTime.html"><strong aria-hidden="true">2.30.</strong> $changeCooldownTime</a></li><li class="chapter-item expanded "><a href="bdscript/channelUsername.html"><strong aria-hidden="true">2.31.</strong> $changeUsername</a></li><li class="chapter-item expanded "><a href="bdscript/changeUsernameWithID.html"><strong aria-hidden="true">2.32.</strong> $changeUsernameWithID</a></li><li class="chapter-item expanded "><a href="bdscript/channelCount.html"><strong aria-hidden="true">2.33.</strong> $channelCount</a></li><li class="chapter-item expanded "><a href="bdscript/channelExists.html"><strong aria-hidden="true">2.34.</strong> $channelExists</a></li><li class="chapter-item expanded "><a href="bdscript/channelID.html"><strong aria-hidden="true">2.35.</strong> $channelID</a></li><li class="chapter-item expanded "><a href="bdscript/channelName.html"><strong aria-hidden="true">2.36.</strong> $channelName</a></li><li class="chapter-item expanded "><a href="bdscript/channelSendMessage.html"><strong aria-hidden="true">2.37.</strong> $channelSendMessage</a></li><li class="chapter-item expanded "><a href="bdscript/channelTopic.html"><strong aria-hidden="true">2.38.</strong> $channelTopic</a></li><li class="chapter-item expanded "><a href="bdscript/charCount.html"><strong aria-hidden="true">2.39.</strong> $charCount</a></li><li class="chapter-item expanded "><a href="bdscript/checkCondition.html"><strong aria-hidden="true">2.40.</strong> $checkCondition</a></li><li class="chapter-item expanded "><a href="bdscript/checkContains.html"><strong aria-hidden="true">2.41.</strong> $checkContains</a></li><li class="chapter-item expanded "><a href="bdscript/checkUserPerms.html"><strong aria-hidden="true">2.42.</strong> $checkUserPerms</a></li><li class="chapter-item expanded "><a href="bdscript/clear.html"><strong aria-hidden="true">2.43.</strong> $clear</a></li><li class="chapter-item expanded "><a href="bdscript/clearReactions.html"><strong aria-hidden="true">2.44.</strong> $clearReactions</a></li><li class="chapter-item expanded "><a href="bdscript/closeTicket.html"><strong aria-hidden="true">2.45.</strong> $closeTicket</a></li><li class="chapter-item expanded "><a href="bdscript/color.html"><strong aria-hidden="true">2.46.</strong> $color</a></li><li class="chapter-item expanded "><a href="bdscript/colorRole.html"><strong aria-hidden="true">2.47.</strong> $colorRole</a></li><li class="chapter-item expanded "><a href="bdscript/commandsCount.html"><strong aria-hidden="true">2.48.</strong> $commandsCount</a></li><li class="chapter-item expanded "><a href="bdscript/cooldown.html"><strong aria-hidden="true">2.49.</strong> $cooldown</a></li><li class="chapter-item expanded "><a href="bdscript/createChannel.html"><strong aria-hidden="true">2.50.</strong> $createChannel</a></li><li class="chapter-item expanded "><a href="bdscript/deleteRole.html"><strong aria-hidden="true">2.51.</strong> $deleteRole</a></li><li class="chapter-item expanded "><a href="bdscript/dm.html"><strong aria-hidden="true">2.52.</strong> $dm</a></li><li class="chapter-item expanded "><a href="bdscript/ephemeral.html"><strong aria-hidden="true">2.53.</strong> $ephemeral</a></li><li class="chapter-item expanded "><a href="bdscript/getInviteInfo.html"><strong aria-hidden="true">2.54.</strong> $getInviteInfo</a></li><li class="chapter-item expanded "><a href="bdscript/getMessage.html"><strong aria-hidden="true">2.55.</strong> $getMessage</a></li><li class="chapter-item expanded "><a href="bdscript/guildID.html"><strong aria-hidden="true">2.56.</strong> $guildID</a></li><li class="chapter-item expanded "><a href="bdscript/isBoolean.html"><strong aria-hidden="true">2.57.</strong> $isBoolean</a></li><li class="chapter-item expanded "><a href="bdscript/isHoisted.html"><strong aria-hidden="true">2.58.</strong> $isHoisted</a></li><li class="chapter-item expanded "><a href="bdscript/membersCount.html"><strong aria-hidden="true">2.59.</strong> $membersCount</a></li><li class="chapter-item expanded "><a href="bdscript/message.html"><strong aria-hidden="true">2.60.</strong> $message</a></li><li class="chapter-item expanded "><a href="bdscript/modifyChannel.html"><strong aria-hidden="true">2.61.</strong> $modifyChannel</a></li><li class="chapter-item expanded "><a href="bdscript/nomention.html"><strong aria-hidden="true">2.62.</strong> $nomention</a></li><li class="chapter-item expanded "><a href="bdscript/ping.html"><strong aria-hidden="true">2.63.</strong> $ping</a></li><li class="chapter-item expanded "><a href="bdscript/replyIn.html"><strong aria-hidden="true">2.64.</strong> $replyIn</a></li><li class="chapter-item expanded "><a href="bdscript/reply.html"><strong aria-hidden="true">2.65.</strong> $reply</a></li><li class="chapter-item expanded "><a href="bdscript/roleInfo.html"><strong aria-hidden="true">2.66.</strong> $roleInfo</a></li><li class="chapter-item expanded "><a href=".bdscript/serverCooldown.html"><strong aria-hidden="true">2.67.</strong> $serverCooldown</a></li><li class="chapter-item expanded "><a href="bdscript/serverInfo.html"><strong aria-hidden="true">2.68.</strong> $serverInfo</a></li><li class="chapter-item expanded "><a href="bdscript/slashCommandsCount.html"><strong aria-hidden="true">2.69.</strong> $slashCommandsCount</a></li><li class="chapter-item expanded "><a href="bdscript/slowmode.html"><strong aria-hidden="true">2.70.</strong> $slowmode</a></li><li class="chapter-item expanded "><a href="bdscript/userInfo.html"><strong aria-hidden="true">2.71.</strong> $userInfo</a></li><li class="chapter-item expanded "><a href="bdscript/userJoinedDiscord.html"><strong aria-hidden="true">2.72.</strong> $userJoinedDiscord</a></li><li class="chapter-item expanded "><a href="bdscript/userJoined.html"><strong aria-hidden="true">2.73.</strong> $userJoined</a></li><li class="chapter-item expanded "><a href="bdscript/username.html"><strong aria-hidden="true">2.74.</strong> $username</a></li></ol></li><li class="chapter-item expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">3.</strong> JavaScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="javascript/javascript.html"><strong aria-hidden="true">3.1.</strong> Introduction</a></li></ol></li><li class="chapter-item expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">4.</strong> Premium</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="premium/customPrefixes.html"><strong aria-hidden="true">4.1.</strong> Custom Prefixes</a></li><li class="chapter-item expanded "><a href="premium/awaitedReactions.html"><strong aria-hidden="true">4.2.</strong> Awaited Reactions</a></li><li class="chapter-item expanded "><a href="premium/alwaysReply.html"><strong aria-hidden="true">4.3.</strong> $alwaysReply</a></li><li class="chapter-item expanded "><a href="premium/ignoreTriggerCase.html"><strong aria-hidden="true">4.4.</strong> $ignoreTriggerCase</a></li><li class="chapter-item expanded "><a href="premium/messageContains.html"><strong aria-hidden="true">4.5.</strong> $messageContains</a></li></ol></li><li class="chapter-item expanded "><a href="callbacks/introduction.html"><strong aria-hidden="true">5.</strong> Callbacks</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="callbacks/introduction.html"><strong aria-hidden="true">5.1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="callbacks/onJoined.html"><strong aria-hidden="true">5.2.</strong> $onJoined</a></li><li class="chapter-item expanded "><a href="callbacks/onLeave.html"><strong aria-hidden="true">5.3.</strong> $onLeave</a></li><li class="chapter-item expanded "><a href="callbacks/onBanAdd.html"><strong aria-hidden="true">5.4.</strong> $onBanAdd</a></li><li class="chapter-item expanded "><a href="callbacks/onBanRemove.html"><strong aria-hidden="true">5.5.</strong> $onBanRemove</a></li><li class="chapter-item expanded "><a href="callbacks/onMessageDelete.html"><strong aria-hidden="true">5.6.</strong> $onMessageDelete</a></li></ol></li></ol>            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="bdfd">Bot Designer for Discord</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                                                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                                                    </div>
+
+                        <h1 class="menu-title">Bot Designer for Discord - Wiki</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                                                    </div>
+                    </div>
+                </div>
+
+                                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="changelog"><a class="header" href="#changelog">Changelog</a></h1>
+<p><em>Note that we often forget to update this article, so some stuff is missing.</em></p>
+<h1 id="2021"><a class="header" href="#2021">2021</a></h1>
+<h2 id="july"><a class="header" href="#july">July</a></h2>
+<ul>
+<li>Added <code>$getTimestamp</code></li>
+<li>Added support for decimals in the math functions</li>
+<li>Added <code>$newSelectMenu[]</code></li>
+<li>Added <code>$addSelectMenuOption[]</code></li>
+<li>Added <code>$editSelectMenu[]</code></li>
+<li>Added <code>$editSelectMenuOption[]</code></li>
+<li>Added <code>$removeComponent[]</code></li>
+<li>Added <code>$calculate[]</code></li>
+<li>Added <code>$round[]</code></li>
+<li>Added <code>$enableDecimals[]</code></li>
+<li>Added <code>$nickname</code></li>
+</ul>
+<h2 id="june"><a class="header" href="#june">June</a></h2>
+<ul>
+<li>Fixed <code>$sendMessage[]</code> not working in normal BDScript</li>
+<li>Fixed <code>$checkUserPerms[]</code></li>
+<li>Added <strong><a href="./guides/bdscript2.html">BDScript 2</a></strong></li>
+<li>Added <strong><a href="./guides/trycatch.html">$try, $catch and $error</a></strong></li>
+<li>Added <code>$eval[]</code> <strong>(can be only used in BDScript 2)</strong></li>
+<li>Added <code>$optOff[]</code> <strong>(can be only used in BDScript 2)</strong></li>
+<li>Added <code>$stop[]</code> <strong>(can be only used in BDScript 2)</strong></li>
+<li>Added <code>$var[]</code> <strong>(can be only used in BDScript 2)</strong></li>
+<li>Added customizable code highlighting</li>
+<li>Fixed <code>$lowestRole</code> and <code>$highestRole</code></li>
+<li>Added <code>$isBoolean[]</code></li>
+<li>Made it possible to add 5 buttons per row</li>
+<li>Added optional field <code>return type</code> to <code>$getLeaderboardValue[]</code></li>
+<li>Added <code>$deleteRole[]</code></li>
+<li>Added <code>$ephemeral</code></li>
+<li>Added <code>$elseif[]</code> <strong>(can be only used in BDScript 2)</strong></li>
+<li>Fixed URL in buttons</li>
+<li>Fixed buttons in DMs</li>
+<li>Fixed problems with custom prefixes</li>
+<li>Added <code>$getUserStatus[]</code></li>
+<li>Added <code>$min[]</code></li>
+<li>Added <code>$max[]</code></li>
+<li>Fixed <code>$customEmoji[]</code></li>
+<li>Made it possible to edit embeds in <code>$editMessage[]</code></li>
+<li>Added support for multiple embeds</li>
+<li>Added <code>$httpAddHeader[]</code></li>
+<li>Added <code>$httpRemoveHeader[]</code></li>
+</ul>
+<h2 id="may"><a class="header" href="#may">May</a></h2>
+<ul>
+<li>Fixed a bug which allowed executing certain types of callbacks as normal commands</li>
+<li>Fixed member caching issue</li>
+<li>Fixed caching bots</li>
+<li>Fixed changing tokens in the webapp</li>
+<li>Fixed <code>$isUserDMEnabled[]</code></li>
+<li>Added <code>$addButton[]</code></li>
+<li>Added <code>$editButton[]</code></li>
+<li>Added <code>$removeButtons</code> and <code>$removeButtons[]</code></li>
+<li>Added <code>$onInteraction[]</code> callback</li>
+<li>Fixed some issues with slash commands</li>
+<li>Added <code>$c[]</code> which can be used for commenting your code</li>
+</ul>
+<h2 id="april"><a class="header" href="#april">April</a></h2>
+<ul>
+<li>Added <code>$httpGet[]</code>, <code>$httpPost[]</code>, <code>$httpPut[]</code>, <code>$httpDelete[]</code> and <code>$httpPatch[]</code></li>
+<li>Improved overall caching</li>
+<li>Added <code>$httpResult[]</code></li>
+<li>Made command execution faster</li>
+</ul>
+<h2 id="march"><a class="header" href="#march">March</a></h2>
+<ul>
+<li>Added <code>$cropText[]</code></li>
+<li>Added <code>userID</code> field to <code>$awaitFunc[]</code></li>
+<li>Fixed removing normal commands and slash commands</li>
+<li>Added <code>$removeLinks[]</code></li>
+<li>Made returning authorID optional in <code>$findUser[]</code></li>
+<li>Added <code>$slowmode[]</code></li>
+<li>Added <code>$checkUserPerms[]</code></li>
+<li>Added <code>$isNSFW[]</code></li>
+<li>Fixed setting NSFW in <code>$modifyChannel[]</code></li>
+<li>Fixed <code>$userJoined[]</code> and <code>$userJoinedDiscord[]</code></li>
+<li>Added <code>$editMessage[]</code></li>
+<li>Fixed caching for new members.</li>
+<li>Added <code>$slashCommandsCount</code></li>
+<li>Added <code>$botID</code></li>
+<li>Added more permissions - AttachFiles, TTS, ManageWebhooks, EmbedLinks, ExternalEmojis</li>
+<li>Added <code>$serverCooldown[]</code></li>
+<li>Fixed the issue with not expiring app bans</li>
+<li>Fixed some issues with <code>[</code> and <code>]</code></li>
+<li>Fixed problems with slash commands and cooldowns</li>
+</ul>
+<h2 id="february"><a class="header" href="#february">February</a></h2>
+<ul>
+<li>Added <code>$sendMessage[]</code></li>
+<li>Added <code>$reply</code></li>
+<li>Added slash commands</li>
+<li>Fixed mentions in <code>$findChannel[]</code></li>
+<li>Improved performance in the command interpreter</li>
+<li>Optimized reaction handlers</li>
+<li>Added <code>$isSlash</code></li>
+<li>Added new optional field to <code>$message[]</code></li>
+<li>Fixed semicolons in <code>$channelSendMessage[]</code></li>
+</ul>
+<h2 id="january"><a class="header" href="#january">January</a></h2>
+<ul>
+<li>Fixed the problem with statuses not showing up</li>
+<li>Fixed the issue with mentions not working</li>
+<li>Fixed loading bots from database</li>
+<li>Increased duration to 40 minutes for <code>$deleteIn[]</code>, <code>$editIn[]</code>, <code>$editEmbedIn[]</code>, <code>$replyIn[]</code></li>
+<li>Added if statements (<code>$if[]</code>, <code>$else</code>, <code>$endif</code>)</li>
+<li>GuildID instead of <code>everyone</code> is now returned in <code>$lowestRole[]</code> and <code>$highestRole[]</code></li>
+<li>Space commands have been removed (you can still use <code>$alwaysReply</code>)</li>
+<li>Added <code>$channelTopic[]</code></li>
+<li>Fixed issues with streaming status</li>
+<li>Fixed the issue with tags/discriminators not working for <code>$userID[]</code> and <code>$findUser[]</code> </li>
+<li>Added <code>$findChannel[]</code> and <code>$channelExists[]</code></li>
+<li>Added <code>$userJoined[]</code> and <code>$userJoinedDiscord[]</code></li>
+</ul>
+<h1 id="2020"><a class="header" href="#2020">2020</a></h1>
+<h2 id="december"><a class="header" href="#december">December</a></h2>
+<ul>
+<li>Timezones in <code>$time[]</code> has been fixed</li>
+<li>Updated discord API version</li>
+<li>Added Competing presence</li>
+<li>Added <code>$botLeave[]</code></li>
+<li>Fix for <code>$getLeaderboardValue[]</code></li>
+<li>Added userID option to reset user var</li>
+<li>Added serverID option to <code>$serverOwner</code></li>
+<li>Added <code>$premiumExpireTime</code></li>
+</ul>
+<h2 id="november"><a class="header" href="#november">November</a></h2>
+<ul>
+<li>Fixed disappearing bot status</li>
+<li>Fixed <code>$serverCount</code> in bot status</li>
+<li>Improved caching</li>
+<li>Functions that require privileged intents are now marked accordingly </li>
+<li>Added <code>$getLeaderboardValue[]</code></li>
+<li>Added <code>$awaitReactions[]</code></li>
+<li>Awaited commands are now available for everyone</li>
+<li>Added awaited reactions</li>
+<li>Fixed problems with DMs</li>
+</ul>
+<h2 id="october"><a class="header" href="#october">October</a></h2>
+<ul>
+<li>Optimized memory usage</li>
+<li>Added member and presence intents</li>
+<li>Added <code>$editEmbedIn[]</code></li>
+<li>Added <code>serverID</code> field to server variables</li>
+<li>Allowed using awaited functions in awaited commands</li>
+<li>Fixed leaderboards</li>
+<li>Fixed <code>$randomMention</code>, <code>$randomUser</code> and <code>$randomUserID</code></li>
+<li>Added <code>$awaitReactions[]</code> for premium bots</li>
+<li>Added <code>$usedEmoji</code></li>
+<li><code>$deletecommand</code> sends an error now</li>
+<li>Fixed <code>$serverVerificationLvl</code> not working on very high verification servers</li>
+<li>Fixed reconnecting bots to gateway</li>
+</ul>
+<h2 id="september"><a class="header" href="#september">September</a></h2>
+<ul>
+<li>Added <code>$ignoreTriggerCase</code> for premium bots</li>
+<li>Fixed caching guilds</li>
+<li><code>$findUser[]</code> &amp; <code>$findRole[]</code> are no longer case sensitive</li>
+<li><code>$findUser[]</code> returns authorID if no user found</li>
+<li>Added awaited commands for premium bots</li>
+<li>Fixed weird brackets in embeds</li>
+<li>Added trigger list in the app</li>
+</ul>
+<h2 id="august"><a class="header" href="#august">August</a></h2>
+<ul>
+<li>Migrated to the new infrastructure (new database and API)</li>
+<li>Premium released</li>
+<li>Fixed <code>$isMentionable[]</code></li>
+<li>Fixed <code>$isHoisted[]</code></li>
+<li>Added <code>$removeSplitTextElement[]</code></li>
+<li><code>$userAvatar[]</code> no longer stops code execution</li>
+<li>Fixed <code>$argCount[]</code></li>
+<li>Added <code>$findUser[]</code></li>
+<li>Added <code>$findRole[]</code></li>
+<li>Added <code>$disableSpecialEscaping</code></li>
+</ul>
+<h2 id="july-1"><a class="header" href="#july-1">July</a></h2>
+<ul>
+<li>Renamed <code>$splitText[]</code> to <code>$getSplitText[]</code> to avoid confusion <em>(<code>$splitText[]</code> still works)</em></li>
+<li>Added <code>$joinSplitText[]</code></li>
+<li>Added <code>$getInviteInfo[]</code></li>
+<li>Added <code>$guildID[]</code></li>
+<li>Fixed <code>$numberSeparator[]</code> in the bot's status</li>
+<li><code>$roleID[]</code> and <code>$channelID[]</code> no longer stop code execution</li>
+<li>Enabled BDScript Unstable for callbacks</li>
+<li>Added <code>$getTextSplitLength</code></li>
+</ul>
+<h2 id="june-1"><a class="header" href="#june-1">June</a></h2>
+<ul>
+<li>Fixed <code>$getReactions[]</code> in BDScript Unstable</li>
+<li>Fixed bracket escaping for some commands in BDScript Unstable</li>
+<li>Fixed <code>$modifyChannel[]</code> (random slowmodes added on channels)</li>
+</ul>
+<h2 id="may-1"><a class="header" href="#may-1">May</a></h2>
+<ul>
+<li>Fixed <code>$onlyBotPerms[]</code></li>
+<li>Bot Designer List Open Beta</li>
+<li>Added <code>$botListDescription[]</code> and <code>$botListHide</code></li>
+<li>Fixed brackets issue in <code>$serverNames</code></li>
+<li>Other bug fixing for Bot Designer and Bot Designer List</li>
+</ul>
+<h2 id="april-1"><a class="header" href="#april-1">April</a></h2>
+<ul>
+<li>Fixed <code>$serverIcon</code></li>
+<li>Added <code>$changeCooldownTime[]</code></li>
+<li>Disabled <code>$randomUserID</code>, <code>$'randomUserID</code>, <code>$deleteIn</code> and <code>$dm</code> in <code>$onMessageDelete</code></li>
+<li>Fixed <code>$addField[]</code></li>
+<li>Added error message in <code>$getServerVar[]</code> when provided variable does not exist</li>
+<li><code>$userID[]</code> does not stop code execution if user is not found</li>
+<li>Added <code>$botLeave</code></li>
+<li>Removed permission check from <code>$clear</code> command.</li>
+<li>Fixed <code>$isAdmin[]</code></li>
+</ul>
+<h2 id="march-1"><a class="header" href="#march-1">March</a></h2>
+<ul>
+<li>Added <code>$getReactions[]</code> and <code>$userReacted[]</code></li>
+<li>New command interpreter</li>
+<li>Added to new parser:
+<ul>
+<li><code>$'random[]</code> and <code>$'random</code></li>
+<li><code>$'randomText[]</code></li>
+<li><code>$'randomUser</code></li>
+<li><code>$'randomMention</code></li>
+<li><code>$'randomUserID</code></li>
+<li><code>$'randomString[]</code></li>
+</ul>
+</li>
+<li>Fixed brackets in <code>$getMessage[]</code></li>
+<li>Changed behaviour of <code>$onlyPerms[]</code> command</li>
+<li>Added <code>$charCount[]</code></li>
+<li>Added <code>$clearReactions[]</code></li>
+<li>Added new options to <code>$getMessage[]</code></li>
+<li>Fixed adding slowmode when using <code>$modifyChannel[]</code></li>
+<li>Added <code>$checkContains[]</code></li>
+<li>Added <code>$addEmoji[]</code></li>
+<li>Fixed the bug with <code>$</code> command prefix and <code>$noMentionMessage</code></li>
+<li>Added <code>$unbanID[]</code></li>
+<li>Added <code>$hasRole[]</code></li>
+<li>Optimized the leaderboard commands</li>
+<li>Fixed permissions in some commands</li>
+<li>Fixed <code>$onlyPerms[]</code></li>
+<li>Fixed the bug with <code>$</code> command prefix and <code>$message</code></li>
+</ul>
+<h2 id="february-1"><a class="header" href="#february-1">February</a></h2>
+<ul>
+<li>Fixed errors in <code>$addField</code></li>
+<li>Added <code>$serverRegion</code></li>
+<li>Added <code>$serverOwner</code></li>
+<li>Added <code>$emoteCount</code></li>
+<li>Added <code>$isMentionable[]</code></li>
+<li>Added <code>$isHoisted[]</code></li>
+<li>Added <code>$serverIcon[]</code></li>
+<li>Fixed suppressing errors in some variable commands</li>
+<li>Fixed bug with <code>$replaceText[]()</code> inside <code>$description</code></li>
+<li>Added <code>$isValidHex[]</code></li>
+<li>Added <code>$isAdmin[]</code></li>
+<li><code>$userID[]</code> does not require discriminator now</li>
+<li>Added <code>$serverVerificationLvl</code></li>
+<li>Fixed stopping command when <code>$changeUsernameWithID[]</code> or <code>$changeUsername[]</code> throws an exception</li>
+<li>Added <code>$modifyRolePerms[]</code></li>
+<li>Added <code>$isUserDMEnabled[]</code></li>
+<li>Added new option to <code>$mentioned[]</code></li>
+<li>When userID is not provided in <code>$discriminator[]</code>, the author's ID will be used</li>
+<li>Added <code>$argCount[]</code></li>
+<li>Added <code>$roleExists[]</code> and <code>$roleExists[]</code> </li>
+<li>Added <code>$varExistError[]</code></li>
+<li>Removed permissions check for <code>$kick[]</code> function</li>
+<li>Fixed brackets issue in <code>$message</code> and <code>$noMentionMessage</code></li>
+<li>Fixed <code>$globalUserLeaderboard[]</code></li>
+<li><code>$repeatMessage[]</code> won't send an error when there is <code>0</code> provided</li>
+</ul>
+<h2 id="january-1"><a class="header" href="#january-1">January</a></h2>
+<ul>
+<li>Final premium preparations</li>
+<li>Space commands for premium bots</li>
+<li>Added <code>sendChannelMessage()</code> to JS</li>
+<li>Added <code>$isNumber[]</code></li>
+<li>Better description for<code> $replaceText[]</code></li>
+<li>Removed <code>#</code> from <code>$getRoleColor[]</code></li>
+<li>Added possibility of adding custom error message to <code>$suppressErrors[]</code></li>
+<li>Added <code>$embedSuppressErrors[]</code></li>
+<li>Added <code>$getServerVar[]</code> in command's name for premium bots</li>
+<li>Added custom separators to <code>$numberSeparator[]</code></li>
+<li>Fixed issue with <code>+</code> and <code>-</code> in <code>$numberSeparator[]</code></li>
+<li>iOS release</li>
+<li>Added <code>$isBot[]</code></li>
+<li>Added <code>userID</code> option to <code>$takeRole[]</code></li>
+<li>Fixed problems with timezones</li>
+<li><code>@everyone</code> role shows up now when it's a highest/lowest role in <code>$highestRole/$lowestRole</code></li>
+<li><code>@everyone</code> role now works in <code>$rolePosition[]</code></li>
+<li>Multiline for <code>$replaceText[]</code></li>
+<li>Fixed no errors in <code>$roleID[]</code></li>
+<li>Added <code>$toUppercase[]</code> and <code>$toLowercase[]</code></li>
+<li>Added roleID and userID to <code>$modifyChannelPerms[]</code></li>
+<li>Added <code>$authorOfMessage[]</code></li>
+<li>Added <code>$userID[]</code></li>
+<li>Improved servers response time by over 10x</li>
+<li>Fixed issues with <code>$setServerVar[]</code> and <code>$setUserVar[]</code></li>
+<li>Added multiline support for <code>$textSplit[]</code></li>
+<li>Fixed brackets in <code>$username</code></li>
+</ul>
+<h1 id="2019"><a class="header" href="#2019">2019</a></h1>
+<h2 id="december-1"><a class="header" href="#december-1">December</a></h2>
+<ul>
+<li>Fixed high ping issues</li>
+<li>Fixed whole bunch of other issues</li>
+<li>To JS added:
+<ul>
+<li>authorId,</li>
+<li>channelId,</li>
+<li>userMentions,</li>
+<li>roleMentions,</li>
+<li>unban(),</li>
+<li>takeRole(),</li>
+<li>giveRole(),</li>
+<li>channelTyping(),</li>
+<li>createChannel(),</li>
+<li>removeChannel(),</li>
+<li>unpinMessage(),</li>
+<li>banWithReason(),</li>
+<li>kickWithReason(),</li>
+<li>removeRole(),</li>
+<li>createRole()</li>
+</ul>
+</li>
+<li>Created status website https://status.botdesignerdiscord.com</li>
+<li>Web version of <em>Bot Designer for Discord</em> has been moved to new address https://botdesignerdiscord.com</li>
+<li>Fixed some issues in web version</li>
+<li>Fixed <code>$banID[]</code></li>
+<li>Preparations for premium points</li>
+</ul>
+<h2 id="november-1"><a class="header" href="#november-1">November</a></h2>
+<ul>
+<li>Added <code>$rolePosition[]</code></li>
+<li>Released translation strings to volunteers</li>
+<li>Added <code>kick()</code> and <code>ban()</code> to JS</li>
+<li>Released new stable version</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="foreword.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+                                                    <a rel="next" href="guides/slashCommands.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a href="foreword.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+                                    <a href="guides/slashCommands.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                            </nav>
+
+        </div>
+
+        
+        
+                
+        
+        
+                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+        
+    </body>
+</html>
